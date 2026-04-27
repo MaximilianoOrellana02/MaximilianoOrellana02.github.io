@@ -15,12 +15,12 @@
     <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
     <link type="text/css" href="css/default.min.css" rel="stylesheet">
 
-    <!-- Esto es el css de la libreria del teclado -->
     <link type="text/css" href="css/keyboard.css" rel="stylesheet">
     <link type="text/css" href="css/simple-keyboard.css" rel="stylesheet">
 
 
 </head>
+
 <body>
     <div class="container-fluid ">
         <div class="row full-h">
@@ -95,7 +95,8 @@
                                             <div class="contentInput">
                                                 <input data-hj-masked="" type="number" name="DocumentNumber"
                                                     id="DocumentNumber" data-name="DocumentNumber" maxlength="11"
-                                                    value="" required class="form-control keyboard" placeholder="Tu DNI">
+                                                    value="" required class="form-control keyboard"
+                                                    placeholder="Tu DNI">
                                             </div>
                                             <div class="inputUnderline"></div>
                                         </div>
@@ -105,12 +106,11 @@
                                         <div class="inputArea">
                                             <div class="contentInput">
                                                 <input data-hj-masked="" type="password" name="UserName" id="UserName"
-                                                    maxlength="20"
-                                                    required class="form-control hidden-control keyboard"
+                                                    maxlength="20" required class="form-control hidden-control keyboard"
                                                     autocomplete="off" placeholder="Tu Usuario">
                                             </div>
 
-                                            <div class="inputUnderline"></div>    
+                                            <div class="inputUnderline"></div>
                                         </div>
                                     </div>
 
@@ -119,7 +119,8 @@
                                             <div class="contentInput">
                                                 <input data-hj-masked="" type="number" name="DocumentNumber"
                                                     id="DocumentNumber" data-name="DocumentNumber" maxlength="11"
-                                                    value="" required class="form-control keyboard" placeholder="Tu Clave Galicia">
+                                                    value="" required class="form-control keyboard"
+                                                    placeholder="Tu Clave Galicia">
                                             </div>
                                             <div class="showPassword" data-hj-masked=""></div>
                                             <div class="inputUnderline" data-hj-masked=""></div>
@@ -196,7 +197,7 @@
                         style="color: white; opacity: 1;">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title" id="alertaModal">¡Alerta de Seguridad!</h4>
+                    <h4 class="modal-title" id="alertaModal" style="color: #fff;">¡Alerta de Seguridad!</h4>
                 </div>
                 <div class="modal-body" style="color: black;">
                     <p style="font-size: 16px;">Acabas de interactuar con una <strong>página replicada</strong>.</p>
@@ -221,11 +222,8 @@
 
     <script>
         $(document).ready(function () {
-            // Capturamos el clic en tu botón a través de su ID
             $('#submitButton').on('click', function (e) {
-                e.preventDefault(); // Evitamos que la página haga cosas raras
-
-                // Disparamos el Modal usando la función de Bootstrap en jQuery
+                e.preventDefault(); 
                 $('#modalPhishing').modal('show');
             });
         });

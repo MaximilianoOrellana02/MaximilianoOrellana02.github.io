@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
   transition: 0.5s;
 }
 
@@ -152,14 +153,12 @@ input:checked + .slider .slider-circle {
   border-top-right-radius: calc(0.25rem - 1px);
 }
 
-
 .destino-card img {
-  transition: transform 0.5s ease; 
+  transition: transform 0.5s ease;
 }
 
-
 .zoom-in-effect {
-  transform: scale(1.15); 
+  transform: scale(1.15);
 }
 
 #filtros-destinos .btn.active {
@@ -167,7 +166,7 @@ input:checked + .slider .slider-circle {
   color: white;
 }
 
-.card-img-wrapper img{
+.card-img-wrapper img {
   overflow: hidden;
   height: 250px;
 }
