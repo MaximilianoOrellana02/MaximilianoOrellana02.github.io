@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--Metadatos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/destinos-style.css" />
+    <!--Titulo-->
+    <title>Destinos</title>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Icono-->
+    <link rel="icon" href="/img/icon.png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/img/logo.png" height="40" alt="Logo Pagina">
+                </a>
+                <label class="theme-switch me-4" for="theme-toggle" aria-label="Cambiar tema">
+                    <input type="checkbox" id="theme-toggle">
+                    <div class="slider">
+                        <div class="slider-circle">
+                            <i class="bi bi-sun-fill icon-sun"></i>
+                            <i class="bi bi-moon-fill icon-moon d-none"></i>
+                        </div>
+                    </div>
+                </label>
+                <div class="d-flex order-lg-last">
+                    <a class="btn btn-nav" href="/view/contacto.html">Contacto</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/view/agencias.html">Agencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/view/precios.html">Precios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/view/blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destinos-section">
+            <div class="container">
+                <div class="row text-center mb-4">
+                    <div class="col-12">
+                        <h2>Nuestros Destinos</h2>
+                        <p>Explora opciones adaptadas a tu estilo de Vida.</p>
+                    </div>
+                </div>
+
+                <div class="row mb-5 justify-content-center">
+                    <div class="col-12 text-center" id="filtros-destinos">
+                        <button class="btn btn-outline-primary active me-2 mb-2" data-filter="todos">Todos</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="playa">Playa</button>
+                        <button class="btn btn-outline-primary me-2 mb-2" data-filter="montana">Montaña</button>
+                        <button class="btn btn-outline-primary mb-2" data-filter="ciudad">Ciudad</button>
+                    </div>
+                </div>
+                <div class="row g-4" id="contenedor-cards">
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="ciudad">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/london.jpeg" class="card-img-top" alt="Ciudad">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Londres, Reino Unido</h5>
+                                <p>Una metrópolis global donde la historia de la monarquía convive con la vanguardia
+                                    urbana. Desde el Big Ben hasta el Soho, ofrece una diversidad cultural y
+                                    arquitectónica única.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="ciudad">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/madrid.jpeg" class="card-img-top" alt="Ciudad">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Madrid, España</h5>
+                                <p>Una capital llena de vida y sol, famosa por la calidez de su gente, sus museos de
+                                    clase mundial como el Prado y una cultura de "tapeo" que convierte cada cena en una
+                                    fiesta.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="ciudad">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/buenos-aires.jpg" class="card-img-top" alt="Ciudad">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Buenos Aires, Argentina</h5>
+                                <p>Conocida como la "París de Sudamérica" por su arquitectura europea, destaca por su
+                                    pasión por el tango, su gastronomía de primer nivel y una oferta cultural que nunca
+                                    duerme.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="ciudad">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/tokio.webp" class="card-img-top" alt="Ciudad">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Tokio, Japón</h5>
+                                <p>Una metrópolis vibrante que mezcla lo tradicional con lo futurista.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="playa">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/cancun.jpg" class="card-img-top" alt="Playa">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Cancún, México</h5>
+                                <p>Disfruta de las aguas cristalinas y la arena blanca.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="montana">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/bariloche.webp" class="card-img-top" alt="Montaña">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Bariloche, Argentina</h5>
+                                <p>Paisajes increíbles ideales para el esquí y el senderismo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="playa">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/maldivas.jpg" class="card-img-top" alt="Playa">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Maldivas (Malé), Maldivas</h5>
+                                <p>El paraíso terrenal de aguas turquesas y villas sobre el mar, ideal para el relax
+                                    total y el buceo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="playa">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/bora.jpg" class="card-img-top" alt="Playa">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Bora Bora, Polinesia Francesa</h5>
+                                <p>Una laguna cristalina rodeada de islotes, perfecta para lunas de miel y desconexión
+                                    absoluta.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="ciudad">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/paris.jpg" class="card-img-top" alt="Ciudad">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">París, Francia</h5>
+                                <p>La ciudad de la luz y el arte, hogar de la Torre Eiffel y museos que guardan la
+                                    historia de la humanidad.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="montana">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/zarmatt.jpg" class="card-img-top" alt="Montaña">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Zermatt, Suiza</h5>
+                                <p>Al pie del icónico monte Cervino, es un paraíso sin autos ideal para el esquí y el
+                                    senderismo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="playa">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/ibiza.jpg" class="card-img-top" alt="Playa">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ibiza, España</h5>
+                                <p>Mucho más que fiesta; ofrece calas escondidas de agua transparente y puestas de sol
+                                    legendarias.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="ciudad">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/ny.avif" class="card-img-top" alt="Ciudad">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Nueva York, Estados Unidos</h5>
+                                <p>"La capital del mundo"; una jungla de asfalto con oferta cultural, museos y parques
+                                    icónicos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="montana">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/banff.webp" class="card-img-top" alt="Montaña">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Banff, Canadá</h5>
+                                <p>Ubicada en el corazón de las Rocosas, ofrece paisajes de lagos color turquesa y picos
+                                    imponentes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="playa">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/dubai.jpeg" class="card-img-top" alt="Playa">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dubái, Emiratos Árabes</h5>
+                                <p>Lujo futurista frente al mar, donde las playas artificiales conviven con los
+                                    rascacielos más altos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="ciudad">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/roma.jpg" class="card-img-top" alt="Ciudad">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Roma, Italia</h5>
+                                <p>Un museo al aire libre donde cada calle tiene siglos de historia, ruinas imperiales y
+                                    mucha pasta.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="montana">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/quenn.jpg" class="card-img-top" alt="Montaña">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Queenstown, Nueva Zelanda</h5>
+                                <p>La capital mundial de la aventura, situada entre los Alpes del Sur y el espectacular
+                                    lago Wakatipu.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="montana">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/cusco.jpg" class="card-img-top" alt="Montaña">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Cusco, Perú</h5>
+                                <p>La antigua capital inca rodeada de montañas, puerta de entrada obligatoria hacia
+                                    Machu Picchu.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="playa">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/santorini.jpg" class="card-img-top" alt="Playa">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Santorini, Grecia</h5>
+                                <p>Famosa por sus iglesias de cúpulas azules y sus acantilados sobre el mar Egeo, ofrece
+                                    las puestas de sol más fotogénicas del mundo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="ciudad">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/seuñ.webp" class="card-img-top" alt="Ciudad">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Seúl, Corea del Sur</h5>
+                                <p>Una metrópolis vibrante donde los palacios imperiales se mezclan con distritos
+                                    tecnológicos y una cultura pop que conquista el globo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="montana">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/hallstatt.webp" class="card-img-top" alt="Montaña">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Hallstatt, Austria</h5>
+                                <p>Un pintoresco pueblo alpino a orillas de un lago, rodeado de montañas imponentes y
+                                    considerado uno de los lugares más bellos de Europa.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 destino-item" data-categoria="montana">
+                        <div class="card h-100 destino-card">
+                            <div class="card-img-wrapper">
+                                <img src="/img/miami.jpg" class="card-img-top" alt="Playa">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Miami, Estados Unidos</h5>
+                                <p>El punto de encuentro entre el lujo tropical y la cultura latina. Disfruta de sus
+                                    icónicas playas de Art Deco, una vida nocturna vibrante y el distrito de diseño más
+                                    moderno del mundo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 mb-5">
+                    <div class="col-12">
+                        <h3 class="fw-bold mb-4 text-center">Tarifas Estimadas por Destino</h3>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Destino</th>
+                                        <th scope="col">Noches</th>
+                                        <th scope="col">Precio por Persona</th>
+                                        <th scope="col">Accion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bariloche, Argentina</td>
+                                        <td>10 Noches</td>
+                                        <td>$550 USD </td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary">Reservar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cancún, Mexico</td>
+                                        <td>7 Noches</td>
+                                        <td>$1,200 USD </td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary">Reservar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tokio, Japón</td>
+                                        <td>10 Noches</td>
+                                        <td>$2,800 USD </td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary">Reservar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Roma, Italia</td>
+                                        <td>15 Noches</td>
+                                        <td>$3,200 USD </td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary">Reservar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Miami, EE.UU</td>
+                                        <td>6 Noches</td>
+                                        <td>$1,300 USD </td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary">Reservar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Buenos Aires, Argentina</td>
+                                        <td>14 Noches</td>
+                                        <td>$900 USD </td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary">Reservar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Banff, Canadá</td>
+                                        <td>12 Noches</td>
+                                        <td>$1,700 USD </td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary">Reservar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-site py-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+
+                <div class="col-md-5 mb-4 mb-md-0 text-center">
+                    <div class="widget">
+                        <h4 class="mb-4">Síguenos en nuestras redes</h4>
+                        <div class="redes-sociales d-flex justify-content-center align-items-center">
+                            <a href="#" class="sprite-icon bg-github" aria-label="Github"></a>
+                            <a href="#" class="sprite-icon bg-facebook" aria-label="Facebook"></a>
+                            <a href="#" class="sprite-icon bg-linkedin" aria-label="LinkedIn"></a>
+                        </div>
+                        <p class="mt-4" style="font-size: 0.9rem;">
+                            Descubrí los mejores destinos con nosotros y formá parte de nuestra comunidad viajera.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="widget text-center">
+                        <h4 class="mb-3">Encuéntranos</h4>
+                        <div class="mapa-container"
+                            style="border-radius: 15px; overflow: hidden; box-shadow: var(--shadow);">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.3068037307843!2d-65.31046202465355!3d-24.18021028362624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f4118018e6d%3A0xc6651276a66a1df0!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+                                height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="mt-5 mb-4" style="border-color: var(--border-color);">
+
+            <div class="copy-footer text-center">
+                <p class="mb-0" style="color: var(--text-muted);">
+                    &copy; Copyright 2026. Todos los Derechos Reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="/js/dark-mode.js"></script>
+    <script src="/js/destinos.js"></script>
+</body>
+
+</html>

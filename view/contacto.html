@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--Metadatos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/contact-style.css" />
+    <!--Titulo-->
+    <title>Contacto</title>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Icono-->
+    <link rel="icon" href="/img/icon.png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/img/logo.png" height="40" alt="Logo Pagina">
+                </a>
+                <label class="theme-switch me-4" for="theme-toggle" aria-label="Cambiar tema">
+                    <input type="checkbox" id="theme-toggle">
+                    <div class="slider">
+                        <div class="slider-circle">
+                            <i class="bi bi-sun-fill icon-sun"></i>
+                            <i class="bi bi-moon-fill icon-moon d-none"></i>
+                        </div>
+                    </div>
+                </label>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/view/destinos.html">Destinos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/view/agencias.html">Agencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/view/precios.html">Precios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/view/blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="hero-contact">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Contactanos</h1>
+                        <p>Muy lejos, detrás de las montañas de palabras, lejos de los países Vokalia y Consonantia,
+                            viven los textos ciegos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <form class="contact-form" id="contacto-form">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="fname">Nombre</label>
+                                        <input type="text" class="form-control" id="fname">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="fname">Apellido</label>
+                                        <input type="text" class="form-control" id="lname">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="email">Correo Electronico</label>
+                                        <input type="email" class="form-control" id="email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="mensaje">Mensaje</label>
+                                        <textarea class="form-control" cols="30" rows="5" id="mensaje"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" id="btn-enviar"
+                                class="btn btn-primary d-flex align-items-center justify-content-center mt-4">
+                                <span id="spinner-carga" class="spinner-border spinner-border-sm d-none me-2"
+                                    role="status" aria-hidden="true"></span>
+                                <span id="btn-texto">Enviar Mensaje</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-lg-5 ml-auto">
+                        <div class="contact-item d-flex align-items-center mb-4">
+                            <i class="bi bi-house"></i>
+                            <div class="text">
+                                155 Market St #101, Paterson, NJ 07505, United States
+                            </div>
+                        </div>
+                        <div class="contact-item d-flex align-items-center mb-4">
+                            <i class="bi bi-telephone"></i>
+                            <div class="text">
+                                (0388) - 4871637
+                            </div>
+                        </div>
+                        <div class="contact-item d-flex align-items-center mb-4">
+                            <i class="bi bi-envelope-at"></i>
+                            <div class="text">
+                                44514609@fi.unju.edu.ar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: var(--card-bg); color: var(--text-main);">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold text-success" id="modalConfirmacionLabel">
+                        <i class="bi bi-check-circle-fill me-2"></i>¡Mensaje Enviado!
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Tu mensaje ha sido recibido correctamente. Nuestro equipo se pondrá en contacto contigo pronto.
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn text-white" style="background-color: var(--accent);"
+                        data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-site py-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+
+                <div class="col-md-5 mb-4 mb-md-0 text-center">
+                    <div class="widget">
+                        <h4 class="mb-4">Síguenos en nuestras redes</h4>
+                        <div class="redes-sociales d-flex justify-content-center align-items-center">
+                            <a href="#" class="sprite-icon bg-github" aria-label="Github"></a>
+                            <a href="#" class="sprite-icon bg-facebook" aria-label="Facebook"></a>
+                            <a href="#" class="sprite-icon bg-linkedin" aria-label="LinkedIn"></a>
+                        </div>
+                        <p class="mt-4" style="font-size: 0.9rem;">
+                            Descubrí los mejores destinos con nosotros y formá parte de nuestra comunidad viajera.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="widget text-center">
+                        <h4 class="mb-3">Encuéntranos</h4>
+                        <div class="mapa-container"
+                            style="border-radius: 15px; overflow: hidden; box-shadow: var(--shadow);">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.3068037307843!2d-65.31046202465355!3d-24.18021028362624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f4118018e6d%3A0xc6651276a66a1df0!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+                                height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr class="mt-5 mb-4" style="border-color: var(--border-color);">
+            <div class="copy-footer text-center">
+                <p class="mb-0" style="color: var(--text-muted);">
+                    &copy; Copyright 2026. Todos los Derechos Reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="/js/dark-mode.js"></script>
+    <script src="/js/contacto.js"></script>
+</body>
+
+</html>

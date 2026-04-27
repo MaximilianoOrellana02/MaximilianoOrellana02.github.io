@@ -1,0 +1,471 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  transition: 0.5s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Modo Claro - Por defecto*/
+  --bg-main: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-main: #1a374d;
+  --text-muted: #777777;
+  --accent: #2994ff;
+  --navbar-bg: #ffffff;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --bg-header: #3593d6;
+  --text-header: #ffffff;
+}
+
+body.dark-mode {
+  --bg-main: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-main: #f0f0f0;
+  --text-muted: #eeeeee;
+  --navbar-bg: #1a1a1a;
+  --card-bg: #252525;
+  --border-color: #333333;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+header {
+  height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.navbar {
+  background-color: var(--navbar-bg); 
+  padding: 12px 60px;
+  z-index: 100;
+}
+
+.nav-item {
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  color: #2994ff;
+}
+
+.nav-link {
+  color: var(--text-main);
+}
+
+.btn-nav {
+  border: solid 2px #2994ff;
+  border-radius: 20px;
+  padding:  10px 20px;
+  margin: 0px 25px;
+  color: #2994ff;
+  transition: all 0.6s ease;
+  font-size: 18px;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 34px;
+  cursor: pointer;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ebebeb; 
+  border-radius: 34px;
+  transition: 0.4s;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.slider-circle {
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+.icon-sun { color: #ffb703; font-size: 16px; }
+.icon-moon { color: #ffffff; font-size: 14px; }
+
+input:checked + .slider {
+  background-color: #1f1f1f;
+}
+
+
+input:checked + .slider .slider-circle {
+  transform: translateX(36px); 
+  background-color: #333333; 
+}
+
+.btn-nav:hover {
+  background-color: #2994ff;
+  color: #fff;
+}
+
+#theme-toggle {
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.15);
+}
+
+body:not(.dark-mode) #theme-toggle {
+  color: var(--text-main) !important;
+}
+
+body.dark-mode #theme-toggle {
+  color: #fca311 !important;
+}
+
+
+
+
+/*Dropdown*/
+
+.dropdown-menu {
+  background-color: var(--navbar-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  border-radius: 12px; 
+  padding: 10px 0;
+  margin-top: 10px !important; 
+  transition: all 0.3s ease;
+}
+
+.dropdown-item {
+  color: var(--text-main);
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.2s, padding-left 0.2s;
+}
+
+
+.dropdown-item:hover {
+  background-color: var(--accent); 
+  color: #ffffff; 
+  padding-left: 25px; 
+}
+
+.dropdown-divider {
+  border-top: 1px solid var(--border-color);
+  opacity: 1;
+}
+
+.nav-item.dropdown .nav-link.dropdown-toggle::after {
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+
+.hero {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 31px;
+}
+
+.hero-content a {
+  text-decoration: none;
+  color: var(--text-header);
+  background-color: var(--bg-header);
+  font-size: 20px;
+  padding: 15px 35px;
+  border-radius: 35px;
+  transition: all 0.3s ease;
+}
+
+.hero-content a:hover {
+  background-color: var(--text-header);
+  color: var(--bg-header);
+}
+
+
+
+.hero-content h1 {
+  font-weight: 100;
+  font-size: 65px;
+  min-height: 160px;
+}
+@media (min-width: 992px) {
+  .hero-content h1 {
+    min-height: auto;
+  }
+}
+
+.service-card {
+  background-color: var(--bg-secondary);
+  border-radius: 20px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card .icon {
+  font-size: 2rem;
+}
+
+body.dark-mode .service-card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .service-card p {
+  color: #b0b0b0 !important;
+}
+
+.feature-img-bg {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  min-height: 400px;
+  width: 100%;
+}
+
+.feature-1 {
+  background: var(--bg-secondary);
+  padding: 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+.feature-1:hover {
+  background: var(--bg-secondary);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px);
+}
+
+.feature-1 h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-top: 15px;
+}
+
+.feature-1 p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.text-primary {
+  color: #6998ab !important;
+}
+
+.align-items-stretch {
+  display: flex;
+}
+
+@media (max-width: 998px) {
+  .services-img {
+    margin-bottom: 20px;
+  }
+
+  .feature-1-wrap {
+    margin-top: 20px;
+  }
+}
+
+/* --- MODO OSCURO --- */
+
+.contador {
+  font-size: 40px;
+}
+
+.caption {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .counter-wrap {
+    text-align: center;
+  }
+}
+
+.dest-card {
+  position: relative;
+  height: 400px;
+  min-height: 450px;
+  border: none;
+  border-radius: 25px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  position: relative;
+}
+
+.san-f {
+  background-image: url(/img/madrid.jpeg);
+}
+.rialto {
+  background-image: url(/img/tokio.webp);
+}
+.londres {
+  background-image: url(/img/london.jpeg);
+}
+
+.dest-card:hover {
+  transform: translateY(-5px);
+}
+
+.dest-card .card-body {
+  position: absolute;
+  top: 20px; 
+  left: 20px;
+  color: #fff;
+  background: transparent;
+}
+
+.dest-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+  color: #1a2b48; /* O blanco, dependiendo de tu imagen */
+}
+
+.dest-card span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+
+.carousel-item {
+  transition: transform 0.8s ease-in-out !important;
+}
+
+.single-item img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.testimonios-section {
+    background-color: var(--bg-main);
+    padding: 80px 0;
+}
+
+.single-item {
+    max-width: 700px; 
+    margin: 0 auto;   
+    text-align: center;
+}
+
+.single-item h5 {
+    font-weight: bold;
+    color: var(--text-main);
+    margin-top: 15px;
+}
+
+.single-item p {
+    font-style: italic;
+    color: var(--text-main);
+}
+
+
+/*Footer*/
+.sprite-icon {
+  display: inline-block;  
+  background-image: url('/img/footer-css_sprites.png'); 
+  background-repeat: no-repeat;
+  margin: 0 10px;  
+  transition: opacity 0.3s ease; 
+}
+
+/* Efecto hover general */
+.sprite-icon:hover {
+  opacity: 0.7;
+  scale: 1.1;
+}
+
+.bg-github {
+    width: 32px; height: 32px;
+    background: url('/img/footer-css_sprites.png') -10px -10px;
+}
+
+.bg-facebook {
+    width: 32px; height: 32px;
+    background: url('/img/footer-css_sprites.png') -62px -10px;
+}
+
+.bg-linkedin {
+    width: 32px; height: 32px;
+    background: url('/img/footer-css_sprites.png') -114px -10px;
+}
+
+.footer-site {
+  background-color: var(--bg-secondary);
+}
+
+.footer-site h3 {
+  font-size: 1.2rem; /* El tamaño que prefieras */
+  color: var(--text-main);    /* También puedes aprovechar para cambiar el color */
+}
+
+.footer-site h4 {
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+.mapa-container iframe {
+  width: 100%;
+}

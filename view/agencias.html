@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Metadatos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/agencias-style.css" />
+    <!--Titulo-->
+    <title>Agencias</title>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Icono-->
+    <link rel="icon" href="/img/icon.png">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/img/logo.png" height="40" alt="Logo Pagina">
+                </a>
+                <label class="theme-switch me-4" for="theme-toggle" aria-label="Cambiar tema">
+                    <input type="checkbox" id="theme-toggle">
+                    <div class="slider">
+                        <div class="slider-circle">
+                            <i class="bi bi-sun-fill icon-sun"></i>
+                            <i class="bi bi-moon-fill icon-moon d-none"></i>
+                        </div>
+                    </div>
+                </label>
+                <div class="d-flex order-lg-last">
+                    <a class="btn btn-nav" href="/view/contacto.html">Contacto</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/view/destinos.html">Destinos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/view/precios.html">Precios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/view/blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="agencia-section">
+            <div class="container">
+                <div class="row text-center mb-4 justify-content-center">
+                    <div class="col-7">
+                        <h2>Nuestras Agencias</h2>
+                        <p>Conectamos con las agencias líderes en cada continente para garantizarte itinerarios exclusivos, tarifas preferenciales y el respaldo local que tu aventura merece.</p>
+                    </div>
+
+                </div>
+                <div class="row text-center">
+                    <div class="col-12 col-md-4 mb-4 xddd">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div
+                                    class="flip-card-front d-flex flex-column justify-content-center align-items-center p-4">
+                                    <img src="/img/zenith.png" alt="Zenith" width="250px" height="100px">
+                                    <p class="mt-2"><i class="bi bi-hand-index-thumb me-2"></i>Haz clic para voltear</p>
+                                </div>
+                                <div
+                                    class="flip-card-back d-flex flex-column justify-content-center align-items-center">
+                                    <h3>Zenith Horizons</h3>
+                                    <p">Especialistas en expediciones de alto nivel y viajes de lujo. Diseñan itinerarios privados a los destinos más remotos.</p>
+                                    <div class="rating mt-3">
+                                        <i class="bi bi-star star-icon" data-value="1"></i>
+                                        <i class="bi bi-star star-icon" data-value="2"></i>
+                                        <i class="bi bi-star star-icon" data-value="3"></i>
+                                        <i class="bi bi-star star-icon" data-value="4"></i>
+                                        <i class="bi bi-star star-icon" data-value="5"></i>
+                                    </div>
+                                    <span class="mt-1"">Califica esta agencia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="flip-card">
+                            <div class="flip-card-inner shadow-sm">
+                                <div
+                                    class="flip-card-front d-flex flex-column justify-content-center align-items-center p-4">
+                                    <img src="/img/nomad.png" alt="Nomad" width="275px" height="120px">
+                                    <p class="mt-2">
+                                        <i class="bi bi-hand-index-thumb me-2">
+                                        </i>Haz clic para voltear</p>
+                                </div>
+                                <div
+                                    class="flip-card-back d-flex flex-column justify-content-center align-items-center p-4">
+                                    <h3>Nomad Pulse</h3>
+                                    <p>La agencia ideal para el viajero joven y aventurero.
+                                        Se enfocan en experiencias auténticas y turismo sostenible.</p>
+                                    <div class="rating mt-3">
+                                        <i class="bi bi-star star-icon" data-value="1"></i>
+                                        <i class="bi bi-star star-icon" data-value="2"></i>
+                                        <i class="bi bi-star star-icon" data-value="3"></i>
+                                        <i class="bi bi-star star-icon" data-value="4"></i>
+                                        <i class="bi bi-star star-icon" data-value="5"></i>
+                                    </div>
+                                    <span class="mt-1"">Califica esta agencia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-4">
+                        <div class="flip-card">
+                            <div class="flip-card-inner shadow-sm">
+                                <div
+                                    class="flip-card-front d-flex flex-column justify-content-center align-items-center p-4">
+                                    <img src="/img/terra.png"  alt="Terra Nova" width="275px" height="120px">
+                                    <h3>Terra Nova</h3>
+                                    <p class="mt-2"><i class="bi bi-hand-index-thumb me-2"></i>Haz clic para voltear</p>
+                                </div>
+                                <div
+                                    class="flip-card-back d-flex flex-column justify-content-center align-items-center p-4">
+                                    <p">Expertos en logística familiar. Su fuerte es la
+                                        organización integral, ofreciendo paquetes todo incluido.</p>
+                                    <div class="rating mt-3">
+                                        <i class="bi bi-star star-icon" data-value="1"></i>
+                                        <i class="bi bi-star star-icon" data-value="2"></i>
+                                        <i class="bi bi-star star-icon" data-value="3"></i>
+                                        <i class="bi bi-star star-icon" data-value="4"></i>
+                                        <i class="bi bi-star star-icon" data-value="5"></i>
+                                    </div>
+                                    <span class="mt-1"">Califica esta agencia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-site py-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+
+                <div class="col-md-5 mb-4 mb-md-0 text-center">
+                    <div class="widget">
+                        <h4 class="mb-4">Síguenos en nuestras redes</h4>
+                        <div class="redes-sociales d-flex justify-content-center align-items-center">
+                            <a href="#" class="sprite-icon bg-github" aria-label="Github"></a>
+                            <a href="#" class="sprite-icon bg-facebook" aria-label="Facebook"></a>
+                            <a href="#" class="sprite-icon bg-linkedin" aria-label="LinkedIn"></a>
+                        </div>
+                        <p class="mt-4"">
+                            Descubrí los mejores destinos con nosotros y formá parte de nuestra comunidad viajera.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="widget text-center">
+                        <h4 class="mb-3">Encuéntranos</h4>
+                        <div class="mapa-container"
+                            style="border-radius: 15px; overflow: hidden; box-shadow: var(--shadow);">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.3068037307843!2d-65.31046202465355!3d-24.18021028362624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f4118018e6d%3A0xc6651276a66a1df0!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+                                height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="mt-5 mb-4" style="border-color: var(--border-color);">
+
+            <div class="copy-footer text-center">
+                <p class="mb-0" style="color: var(--text-muted);">
+                    &copy; Copyright 2026. Todos los Derechos Reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/dark-mode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/js/agencias.js"></script>
+</body>
+
+</html>
