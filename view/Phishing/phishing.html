@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+    <title>Online Banking (Replica)</title>
+
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/default.min.css" rel="stylesheet">
+
+    <!-- Esto es el css de la libreria del teclado -->
+    <link type="text/css" href="css/keyboard.css" rel="stylesheet">
+    <link type="text/css" href="css/simple-keyboard.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="container-fluid ">
+        <div class="row full-h">
+            <div class="left-column">
+                <div class="logo_login" role="banner" data-automation-id="galicia-banner">
+                    <a title="link a galicia.ar" class="logo" href="https://www.galicia.ar/personas"
+                        aria-label="Ingresar a la página principal de Banco Galicia" target="_blank">
+                        <div class="logo_sidebar_img"></div>
+                    </a>
+                    <p>Online Banking</p>
+                </div>
+
+
+                <div class="login">
+
+                    <style>
+                        #banner_galicia_mas .border_box_shadow {
+                            border-radius: 8px;
+                            border: 2px solid #E6E6E6;
+                            padding: 0 16px;
+                        }
+
+                        #banner_galicia_mas h6 {
+                            font-size: 14px;
+                            font-weight: 600;
+                            line-height: 18px;
+                            color: #4D4D4D;
+                            margin-top: 16px;
+                        }
+
+                        #banner_galicia_mas p {
+                            font-size: 12px;
+                            font-weight: 400;
+                            color: #000;
+                            margin: 0 16px 16px 0;
+                        }
+
+                        #banner_galicia_mas p a {
+                            font-size: 12px;
+                            font-weight: 600;
+                            color: #A84308;
+                        }
+
+                        #banner_galicia_mas img {
+                            margin-top: 16px;
+                        }
+
+                        @media screen and (min-width: 768px) {
+                            #banner_galicia_mas {
+                                margin-bottom: 80px;
+                            }
+                        }
+                    </style>
+
+                    <div class="content-login" role="main">
+
+
+
+                        <form action="/Users/LogIn" method="post" id="form1" onkeypress="return evalEnter(event);"
+                            autocomplete="off">
+                            <input name="__RequestVerificationToken" type="hidden"
+                                value="TGA9lnqQGixEm2CXJnnTv6czIAkogjoht5LRZgF9yPmbcOmS2beBKZkuk_1aNHL-5S9rLqYiUcdQNjqtF96M7DSQoTsJgK7m-42dR9WtJvo1">
+                            <div class="login-form">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h1 onclick="enableDebug();" class="login-title hidden-xs">Iniciar sesión</h1>
+                                    </div>
+                                    <input data-hj-masked="" type="hidden" value="" name="EncriptedPassword"
+                                        id="EncriptedPassword">
+                                    <div class="inputWrapper">
+                                        <div class="inputArea">
+                                            <div class="contentInput">
+                                                <input data-hj-masked="" type="number" name="DocumentNumber"
+                                                    id="DocumentNumber" data-name="DocumentNumber" maxlength="11"
+                                                    value="" required class="form-control keyboard" placeholder="Tu DNI">
+                                            </div>
+                                            <div class="inputUnderline"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="inputWrapper password">
+                                        <div class="inputArea">
+                                            <div class="contentInput">
+                                                <input data-hj-masked="" type="password" name="UserName" id="UserName"
+                                                    maxlength="20"
+                                                    required class="form-control hidden-control keyboard"
+                                                    autocomplete="off" placeholder="Tu Usuario">
+                                            </div>
+
+                                            <div class="inputUnderline"></div>    
+                                        </div>
+                                    </div>
+
+                                    <div class="inputWrapper password">
+                                        <div class="inputArea">
+                                            <div class="contentInput">
+                                                <input data-hj-masked="" type="number" name="DocumentNumber"
+                                                    id="DocumentNumber" data-name="DocumentNumber" maxlength="11"
+                                                    value="" required class="form-control keyboard" placeholder="Tu Clave Galicia">
+                                            </div>
+                                            <div class="showPassword" data-hj-masked=""></div>
+                                            <div class="inputUnderline" data-hj-masked=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <div class="checkbox checkbox-primary">
+                                                <input name="RememberMe" id="RememberMe" type="checkbox" value="true">
+                                                <label for="RememberMe">
+                                                    Recordar DNI y Usuario
+                                                </label>
+                                            </div>
+                                            <input name="RememberMe" type="hidden" value="false">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="teclado teclado-virtual hidden-xs keyboard-trigger">
+                                            <i class="far fa-keyboard " id="keyboardIcon" style="cursor: pointer;"></i>
+                                            <div name="divTeclado" id="divTeclado" type="checkbox" value="true">Teclado
+                                                Virtual</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-md btn-full-width" type="button" id="submitButton">
+                                            iniciar sesión
+                                        </button>
+                                    </div>
+
+                                    <div class="col-xs-12">
+                                        <div class="links">
+
+                                            <a href="/gestion/ingresar-du" class="btn btn-caps pull-left">
+                                                OLVIDÉ O BLOQUEÉ MIS CLAVES
+                                            </a>
+                                        </div>
+
+                                        <p>Sí es tu primera vez o necesitás el usuario</p>
+                                        <div class="links">
+                                            <a class="btn btn-caps pull-left" href="/gestion/ingresar-du">
+                                                CREÁ TUS CLAVES
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="terms" role="contentinfo">
+                    <p>Operar con Online Banking implica aceptar los <a href="javascript:void(0)"
+                            onclick="javascript:window.open('/terminosycondiciones', '_blank');return false;">términos y
+                            condiciones</a> en los que se ofrece el servicio.</p>
+                    <p><a href="/Seguridad/informacion-seguridad">Información sobre seguridad</a>. Ir a <strong> <a
+                                href="https://wsec06.bancogalicia.com.ar/" target="_blank">Office Banking</a></strong>
+                    </p>
+                </div>
+            </div>
+            <div class="side-info content img art art-8" role="complementary" data-automation-id="out-banner">
+                <div class="bullet">
+                    <h2>Bienvenido a<br> Online Banking</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPhishing" tabindex="-1" role="dialog" aria-labelledby="alertaModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #d9534f; color: white;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        style="color: white; opacity: 1;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="alertaModal">¡Alerta de Seguridad!</h4>
+                </div>
+                <div class="modal-body" style="color: black;">
+                    <p style="font-size: 16px;">Acabas de interactuar con una <strong>página replicada</strong>.</p>
+                    <div
+                        style="background-color: #fcf8e3; padding: 15px; border-left: 4px solid #f0ad4e; margin-top: 15px;">
+                        <strong>Señales de fraude:</strong>
+                        <ul style="margin-bottom: 0;">
+                            <li>La URL no es la oficial del banco.</li>
+                            <li>Simulación educativa de Phishing.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Capturamos el clic en tu botón a través de su ID
+            $('#submitButton').on('click', function (e) {
+                e.preventDefault(); // Evitamos que la página haga cosas raras
+
+                // Disparamos el Modal usando la función de Bootstrap en jQuery
+                $('#modalPhishing').modal('show');
+            });
+        });
+    </script>
+</body>
+
+</html>
